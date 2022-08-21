@@ -1,0 +1,136 @@
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\appsettings.Development.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\appsettings.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.exe
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.deps.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.runtimeconfig.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.pdb
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.AssemblyReference.cache
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.AssemblyInfoInputs.cache
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.AssemblyInfo.cs
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.CoreCompileInputs.cache
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\staticwebassets.build.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\staticwebassets.development.json
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\scopedcss\bundle\Systematix.WebAPI.styles.css
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.CopyComplete
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\refint\Systematix.WebAPI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.pdb
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.genruntimeconfig.cache
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\ref\Systematix.WebAPI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Humanizer.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Sushant\Projects\Upcoming Projects\.Net Core App\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\appsettings.Development.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\appsettings.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.exe
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.deps.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.runtimeconfig.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Systematix.WebAPI.pdb
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\AutoMapper.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Humanizer.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Runtime.Caching.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\bin\Debug\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.AssemblyReference.cache
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.AssemblyInfoInputs.cache
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.AssemblyInfo.cs
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.CoreCompileInputs.cache
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.MvcApplicationPartsAssemblyInfo.cs
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.MvcApplicationPartsAssemblyInfo.cache
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\staticwebassets.build.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\staticwebassets.development.json
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\scopedcss\bundle\Systematix.WebAPI.styles.css
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.csproj.CopyComplete
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\refint\Systematix.WebAPI.dll
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.pdb
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\Systematix.WebAPI.genruntimeconfig.cache
+D:\Practice\SystematixWebAPI\Systematix.WebAPI\obj\Debug\net6.0\ref\Systematix.WebAPI.dll
