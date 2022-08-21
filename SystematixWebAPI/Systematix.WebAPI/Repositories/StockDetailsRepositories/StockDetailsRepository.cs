@@ -13,23 +13,41 @@ namespace Systematix.WebAPI.Repositories.StockDetailsRepositories
 
         public async Task<(bool, string)> AddStockDetails(StockDetails stockDetailsRequest)
         {
-            var IfExist = systematixDbContext.tbl_StockDetails.Any(x => x.StockName == stockDetailsRequest.StockName || x.Symbol == stockDetailsRequest.Symbol);
-            
-            if (IfExist)
+            try
             {
-                return (false, "StockName Or Symbol already Exist");
+                var IfExist = systematixDbContext.tbl_StockDetails.Any(x => x.StockName == stockDetailsRequest.StockName || x.Symbol == stockDetailsRequest.Symbol);
+
+                if (IfExist)
+                {
+                    return (false, "StockName Or Symbol already Exist");
+                }
+
+                await systematixDbContext.tbl_StockDetails.AddAsync(stockDetailsRequest);
+                await systematixDbContext.SaveChangesAsync();
+
+                return (true, "StockDetails Register Succesfully");
             }
+            catch (Exception ex)
+            {
 
-            await systematixDbContext.tbl_StockDetails.AddAsync(stockDetailsRequest);
-            await systematixDbContext.SaveChangesAsync();
-
-            return (true, "StockDetails Register Succesfully");
+                throw;
+            }
+            
         }
 
         public async Task<List<StockDetails>> GetAllStockDetails()
         {
-            var listStockDetails = systematixDbContext.tbl_StockDetails.ToList();
-            return listStockDetails;
+            try
+            {
+                var listStockDetails = systematixDbContext.tbl_StockDetails.ToList();
+                return listStockDetails;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
     }
 }

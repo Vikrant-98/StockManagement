@@ -29,7 +29,7 @@ namespace Systematix.WebAPI.Models.DTO.ClientDetails
 
     public class ClientInformationRequest
     {
-        public string EmailID { get; set; }
+        public string ClientCode { get; set; }
         public string Password { get; set; }
     }
 
@@ -88,7 +88,7 @@ namespace Systematix.WebAPI.Models.DTO.ClientDetails
         public string PANNumber { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }
-        public List<ClientHoldingsInfo> ClientHoldings { get; set; }
+        public List<ClientHoldingsInfo> Details { get; set; }
     }
 
     public class ClientAddress : Entity

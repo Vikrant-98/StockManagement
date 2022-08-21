@@ -15,7 +15,7 @@ namespace Systematix.WebAPI.Business
         public async Task<Response> LoginClientAsync(ClientInformationRequest employeedetail)
         {
 
-            if (string.IsNullOrEmpty(employeedetail.EmailID) || string.IsNullOrEmpty(employeedetail.Password)) 
+            if (string.IsNullOrEmpty(employeedetail.ClientCode) || string.IsNullOrEmpty(employeedetail.Password)) 
             {
                 return new Response()
                 {
@@ -30,18 +30,18 @@ namespace Systematix.WebAPI.Business
 
             return Response;
         }
-        public async Task<(bool, string)> RegisterClientAsync(ClientRegister ClientRegister)
+        public async Task<(bool, string,string)> RegisterClientAsync(ClientRegister ClientRegister)
         {
            
             if (string.IsNullOrEmpty(ClientRegister.EmailID) || string.IsNullOrEmpty(ClientRegister.Password)||
                 string.IsNullOrEmpty(ClientRegister.FirstName) || string.IsNullOrEmpty(ClientRegister.LastName)) 
             {
-                return (false, "Details are Invalid");
+                return (false, "Details are Invalid",string.Empty);
             }
             ClientInformation clientInformation = new ClientInformation() 
             {
                 EmailID = ClientRegister.EmailID,
-                ClientCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()),
+                ClientCode = GenerateUnique("SMX"),
                 FirstName = ClientRegister.FirstName,
                 LastName = ClientRegister.LastName,
                 Status = 1,
@@ -102,7 +102,7 @@ namespace Systematix.WebAPI.Business
             {
                 FatherName = ClientDetailsRequest.FatherName,
                 ClientCode = clientCode,
-                TradingCode = Convert.ToBase64String(Guid.NewGuid().ToByteArray()),
+                TradingCode = GenerateUnique("TMX"),
                 MotherName = ClientDetailsRequest.MobileNumber,
                 Status = 1,
                 PANNumber = ClientDetailsRequest.PANNumber,
@@ -149,6 +149,79 @@ namespace Systematix.WebAPI.Business
 
             var Response = await _clientDetailsRepository.VerifyClientPAN_DetailsAsync(ClientPANValidateRequest).ConfigureAwait(false);
             return Response;
+        }
+
+        private static string GenerateUnique(string strPrifix)
+        {
+            int CodeSize = 8;
+            string strOrderNumber = null;
+            Random rnd = new Random();
+            char[] letter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".ToArray();
+
+            int iPrifixCount = strPrifix.Length;
+            int OrderCount = CodeSize - iPrifixCount;
+            int iAlphabetLimit = 0;
+            int iNumberLimit = 0;
+
+            if ((OrderCount % 2) == 0)
+            {
+                if ((OrderCount / 2) != 1)
+                {
+                    iAlphabetLimit = OrderCount / 2;
+                    iNumberLimit = iAlphabetLimit;
+                }
+                else
+                {
+                    iAlphabetLimit = 1;
+                    iNumberLimit = 1;
+                }
+            }
+            else
+            {
+                int CurrentOC = OrderCount - 1;
+                if (CurrentOC == 0)
+                {
+                    iAlphabetLimit = 1;
+                    iNumberLimit = 0;
+                }
+                if ((CurrentOC / 2) != 1)
+                {
+                    iAlphabetLimit = CurrentOC / 2;
+                    iNumberLimit = iAlphabetLimit + 1;
+                }
+                else
+                {
+                    iAlphabetLimit = 1;
+                    iNumberLimit = 1;
+                }
+            }
+
+            int iAlphaCount = 0, iCount = 0, count = 0;
+
+            try
+            {
+                while (count < OrderCount)
+                {
+                    if (rnd.Next() % 2 == 0 && iAlphaCount < iAlphabetLimit)
+                    {
+                        strOrderNumber += letter[rnd.Next(0, letter.Length)];
+                        iAlphaCount++;
+                        count++;
+                    }
+                    else if (iCount < iNumberLimit)
+                    {
+                        strOrderNumber += rnd.Next(0, 9);
+                        iCount++;
+                        count++;
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            strOrderNumber = strPrifix + strOrderNumber;
+            return strOrderNumber;
         }
 
     }

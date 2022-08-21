@@ -13,28 +13,46 @@ namespace Systematix.WebAPI.Repositories.LedgerRepository
 
         public async Task<(bool, string)> AddLedgerAsync(Ledger Ledger)
         {
-            var result = systematixDbContext.tbl_ClientLedger.Where(x => x.ClientCode == Ledger.ClientCode).FirstOrDefault();
-            if (result == null)
+            try
             {
-                await systematixDbContext.tbl_ClientLedger.AddAsync(Ledger);
-                await systematixDbContext.SaveChangesAsync();
-            }
-            else 
-            {
-                result.LedgerBalance = result.LedgerBalance + Ledger.LedgerBalance;
-                result.UpdateDate = DateTime.Now;
-                systematixDbContext.tbl_ClientLedger.Update(result);
-                await systematixDbContext.SaveChangesAsync();
-            }
+                var result = systematixDbContext.tbl_ClientLedger.Where(x => x.ClientCode == Ledger.ClientCode).FirstOrDefault();
+                if (result == null)
+                {
+                    await systematixDbContext.tbl_ClientLedger.AddAsync(Ledger);
+                    await systematixDbContext.SaveChangesAsync();
+                }
+                else
+                {
+                    result.LedgerBalance = result.LedgerBalance + Ledger.LedgerBalance;
+                    result.UpdateDate = DateTime.Now;
+                    systematixDbContext.tbl_ClientLedger.Update(result);
+                    await systematixDbContext.SaveChangesAsync();
+                }
 
-            return (true, "Ledger Added Succesfully");
+                return (true, "Ledger Added Succesfully");
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
 
         public async Task<(bool, double, string)> GetLedgerAsync(string clientCode)
         {
-            var result = systematixDbContext.tbl_ClientLedger.Where(x=>x.ClientCode == clientCode).FirstOrDefault();
+            try
+            {
+                var result = systematixDbContext.tbl_ClientLedger.Where(x => x.ClientCode == clientCode).FirstOrDefault();
 
-            return (true, result.LedgerBalance, "Ledger Added Succesfully");
+                return (true, result.LedgerBalance, "Ledger Added Succesfully");
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
         }
 
     }

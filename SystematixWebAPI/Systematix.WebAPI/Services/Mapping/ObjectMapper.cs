@@ -28,7 +28,7 @@ namespace Systematix.WebAPI.Services.Mapping
                         PANNumber = clientDetails.PANNumber,
                         TradingCode = clientDetails.TradingCode,
                         FatherName = clientDetails.FatherName,
-                        ClientHoldings = clientHoldingsInfo
+                        Details = clientHoldingsInfo
                     },
                     Status = true,
                     StatusMessage = "Success"

@@ -33,7 +33,7 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         public async Task<IActionResult> AddClient([FromBody] ClientRegister client)
         {
             var result = await _clientDetailsBusiness.RegisterClientAsync(client).ConfigureAwait(false);
-            return Ok(new { status = result.Item1, Message = result.Item2});
+            return Ok(new { status = result.Item1, Message = result.Item2,ClientCode = result.Item3});
         }
 
         [HttpPost("AddClientDetails")]
