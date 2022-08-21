@@ -12,8 +12,8 @@ using Systematix.WebAPI.Data;
 namespace Systematix.WebAPI.Migrations
 {
     [DbContext(typeof(SystematixDbContext))]
-    [Migration("20220821113017_addbranchmaster")]
-    partial class addbranchmaster
+    [Migration("20220821124722_firstmigration")]
+    partial class firstmigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

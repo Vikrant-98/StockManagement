@@ -3,6 +3,7 @@ using Systematix.WebAPI.Data;
 using Systematix.WebAPI.Models.DTO.ClientDetails;
 using Systematix.WebAPI.Models.DTO.Holdings;
 using Systematix.WebAPI.Models.DTO.Ledger;
+using Systematix.WebAPI.Models.DTO.Stocks;
 using Systematix.WebAPI.Repositories.TokenHandlerRepositories;
 using Systematix.WebAPI.Services.Mapping;
 
@@ -149,6 +150,11 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
         {
             try
             {
+                var brandExist = systematixDbContext.tbl_BranchMaster.Any(x => x.BranchCode == ClientHoldings.BranchCode);
+                if (!brandExist) 
+                {
+                    return (false, "BrandCode Is Invalid Is Invalid");
+                }
                 var Stocks = systematixDbContext.tbl_StockDetails.Where(x => x.ISIN == ClientHoldings.ISIN).FirstOrDefault();
                 if (Stocks == null)
                 {

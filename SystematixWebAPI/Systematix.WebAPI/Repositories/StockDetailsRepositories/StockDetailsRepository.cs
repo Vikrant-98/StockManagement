@@ -15,6 +15,7 @@ namespace Systematix.WebAPI.Repositories.StockDetailsRepositories
         {
             try
             {
+                
                 var IfExist = systematixDbContext.tbl_StockDetails.Any(x => x.StockName == stockDetailsRequest.StockName || x.Symbol == stockDetailsRequest.Symbol);
 
                 if (IfExist)

@@ -23,6 +23,25 @@ namespace Systematix.WebAPI.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "tbl_BranchMaster",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BranchName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    BranchCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatesBy = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tbl_BranchMaster", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "tbl_Client",
                 columns: table => new
                 {
@@ -78,7 +97,6 @@ namespace Systematix.WebAPI.Migrations
                     PANNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FatherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     MotherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    FundAvailable = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     IsDelete = table.Column<bool>(type: "bit", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -99,9 +117,10 @@ namespace Systematix.WebAPI.Migrations
                     ClientCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Symbol = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ISIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Quantity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Rate = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Value = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Quantity = table.Column<int>(type: "int", nullable: false),
+                    Rate = table.Column<double>(type: "float", nullable: false),
+                    Value = table.Column<double>(type: "float", nullable: false),
+                    BranchCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     IsDelete = table.Column<bool>(type: "bit", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -120,7 +139,7 @@ namespace Systematix.WebAPI.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ClientCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LedgerBalance = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    LedgerBalance = table.Column<double>(type: "float", nullable: false),
                     Status = table.Column<int>(type: "int", nullable: false),
                     IsDelete = table.Column<bool>(type: "bit", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -150,6 +169,27 @@ namespace Systematix.WebAPI.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_tbl_EmployeeDetails", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "tbl_StockDetails",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    StockName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Symbol = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ISIN = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    StockPrice = table.Column<double>(type: "float", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    IsDelete = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatesBy = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_tbl_StockDetails", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -256,6 +296,9 @@ namespace Systematix.WebAPI.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "tbl_BranchMaster");
+
+            migrationBuilder.DropTable(
                 name: "tbl_Client");
 
             migrationBuilder.DropTable(
@@ -272,6 +315,9 @@ namespace Systematix.WebAPI.Migrations
 
             migrationBuilder.DropTable(
                 name: "tbl_EmployeeDetails");
+
+            migrationBuilder.DropTable(
+                name: "tbl_StockDetails");
 
             migrationBuilder.DropTable(
                 name: "tbl_UserAddress");

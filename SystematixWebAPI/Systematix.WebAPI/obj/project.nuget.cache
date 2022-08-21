@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "8K1fqxBbkAJ20G5UphYPLn1dv9T9Pq6qo0rAFGprUMZ998Jmo1f0JTUagcw9Z6Nh9Kg9X3AIM3sO94ntsRf1vA==",
+  "dgSpecHash": "5gHUfFDGVPfchRIMz0zb4p90qxyyeX8KUPIwPfFHESOKHnCb5jnZTNngvjBpttIUWX7l32t/p4E79sYz+HvrmQ==",
   "success": true,
-  "projectFilePath": "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
+  "projectFilePath": "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",

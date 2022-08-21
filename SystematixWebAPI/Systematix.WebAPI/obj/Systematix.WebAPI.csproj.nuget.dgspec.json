@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj": {}
+    "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj": {}
   },
   "projects": {
-    "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj": {
+    "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
+        "projectUniqueName": "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
         "projectName": "Systematix.WebAPI",
-        "projectPath": "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
+        "projectPath": "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\Systematix.WebAPI.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\Practice\\SystematixWebAPI\\Systematix.WebAPI\\obj\\",
+        "outputPath": "D:\\net\\StockManagement\\SystematixWebAPI\\Systematix.WebAPI\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -101,7 +97,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -113,7 +110,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }
