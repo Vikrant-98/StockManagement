@@ -34,6 +34,7 @@ namespace Systematix.WebAPI.Data
         public DbSet<ClientDetails> tbl_ClientDetails { get; set; }
         public DbSet<ClientAddress> tbl_ClientAddress { get; set; }
         public DbSet<ClientHoldings> tbl_ClientHoldings { get; set; }
+        public DbSet<Branch> tbl_BranchMaster { get; set; }
         public DbSet<Ledger> tbl_ClientLedger { get; set; }
         public DbSet<UserMaster> tbl_UserMaster { get; set; }
         public DbSet<UserAddress> tbl_UserAddress { get; set; }

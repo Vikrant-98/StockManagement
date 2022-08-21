@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Systematix.WebAPI.Business;
+using Systematix.WebAPI.Models.DTO.Holdings;
 
 namespace Systematix.WebAPI.Controllers.LedgerController
 {
@@ -35,6 +36,23 @@ namespace Systematix.WebAPI.Controllers.LedgerController
             var result = await _ledgerBusiness.GetLedgerAsync(ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item3 ,Fund = result.Item2});
         }
+
+        [HttpPost("AddBranch")]
+        public async Task<IActionResult> AddBranch([FromBody] BranchRequest branch)
+        {
+            
+            var result = await _ledgerBusiness.AddBranchAsync(branch).ConfigureAwait(false);
+            return Ok(new { status = result.Item1, Message = result.Item2 });
+        }
+
+        [HttpGet("GetBrand")]
+        public async Task<IActionResult> GetBranch()
+        {
+            
+            var result = await _ledgerBusiness.GetBranchAsync().ConfigureAwait(false);
+            return Ok(new { status = result.Item1, Message = result.Item1?"Success":"Someting Went Wrong", Data = result.Item2 });
+        }
+
 
     }
 }

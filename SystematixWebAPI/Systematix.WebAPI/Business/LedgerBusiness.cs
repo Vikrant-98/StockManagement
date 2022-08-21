@@ -1,4 +1,5 @@
-﻿using Systematix.WebAPI.Models.DTO.Ledger;
+﻿using Systematix.WebAPI.Models.DTO.Holdings;
+using Systematix.WebAPI.Models.DTO.Ledger;
 using Systematix.WebAPI.Repositories.LedgerRepository;
 
 namespace Systematix.WebAPI.Business
@@ -48,5 +49,39 @@ namespace Systematix.WebAPI.Business
             return Results;
         }
 
+        public async Task<(bool, List<BranchRequest>)> GetBranchAsync()
+        {
+            var Results = await _ledgerRepository.GetBranchAsync().ConfigureAwait(false);
+            return Results;
+        }
+        public async Task<(bool, string)> AddBranchAsync(BranchRequest branch)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(branch.BranchCode) || string.IsNullOrEmpty(branch.BranchName))
+                {
+                    return (false, "BranchCode and BranchName is not valid");
+                }
+
+                Branch branchreq = new Branch() 
+                {
+                    BranchCode = branch.BranchCode,
+                    BranchName = branch.BranchName,
+                    CreatedDate = DateTime.Now,
+                    Status = 1,
+                    IsDelete = false
+                };
+                var result = await _ledgerRepository.AddBranchAsync(branchreq).ConfigureAwait(false);
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

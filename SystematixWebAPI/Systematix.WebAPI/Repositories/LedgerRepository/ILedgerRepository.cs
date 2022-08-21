@@ -1,4 +1,5 @@
-﻿using Systematix.WebAPI.Models.DTO.Ledger;
+﻿using Systematix.WebAPI.Models.DTO.Holdings;
+using Systematix.WebAPI.Models.DTO.Ledger;
 
 namespace Systematix.WebAPI.Repositories.LedgerRepository
 {
@@ -6,5 +7,7 @@ namespace Systematix.WebAPI.Repositories.LedgerRepository
     {
         Task<(bool, string)> AddLedgerAsync(Ledger Ledger);
         Task<(bool, double, string)> GetLedgerAsync(string clientCode);
+        Task<(bool, string)> AddBranchAsync(Branch branch);
+        Task<(bool, List<BranchRequest>)> GetBranchAsync();
     }
 }

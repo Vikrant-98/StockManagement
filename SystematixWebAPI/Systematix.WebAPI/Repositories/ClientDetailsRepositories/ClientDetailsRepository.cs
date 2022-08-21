@@ -69,7 +69,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
                 var details = systematixDbContext.tbl_Client.Any(x => x.EmailID == ClientRegister.EmailID);
                 if (details)
                 {
-                    return (false, "User already Exist", ClientRegister.ClientCode);
+                    return (false, "User already Exist", string.Empty);
                 }
 
                 await systematixDbContext.tbl_Client.AddAsync(ClientRegister);
@@ -229,6 +229,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
             var ClientDetails = await systematixDbContext.tbl_ClientDetails.FirstOrDefaultAsync(x => x.ClientCode == ClientInformation.ClientCode).ConfigureAwait(false);
             var ClientAddress = await systematixDbContext.tbl_ClientAddress.FirstOrDefaultAsync(x => x.ClientCode == ClientInformation.ClientCode).ConfigureAwait(false);
             var ClientHoldings = systematixDbContext.tbl_ClientHoldings.Where(x => x.ClientCode == ClientInformation.ClientCode).ToList();
+            var BranchMaster = systematixDbContext.tbl_BranchMaster.ToList();
             var ClientHoldingGroup = ClientHoldings.GroupBy(x => x.ISIN);
 
             if (ClientDetails == null || ClientAddress == null || ClientHoldings == null)
@@ -247,6 +248,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
                 var TempClientCode = item.Select(x => x.ClientCode).FirstOrDefault();
                 var TempSymbol = item.Select(x => x.Symbol).FirstOrDefault();
                 var TempISIN = item.Select(x => x.ISIN).FirstOrDefault();
+                var TempBranch = BranchMaster.Where(x => x.BranchCode == item.Select(y => y.BranchCode).FirstOrDefault()).FirstOrDefault();
                 clientHoldingsInfo.Add(new ClientHoldingsInfo()
                 {
                     ClientCode = string.IsNullOrEmpty(TempClientCode) ? string.Empty : TempClientCode,
@@ -254,6 +256,8 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
                     ISIN = string.IsNullOrEmpty(TempISIN) ? string.Empty : TempISIN,
                     Quantity = TempQuantity,
                     Rate = TempRate,
+                    BranchCode = TempBranch.BranchCode,
+                    BranchName = TempBranch.BranchName,
                     Value = TempRate * TempQuantity
                 });
             }

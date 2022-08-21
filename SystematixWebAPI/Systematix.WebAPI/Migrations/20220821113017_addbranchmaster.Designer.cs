@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Systematix.WebAPI.Data;
 
@@ -11,9 +12,10 @@ using Systematix.WebAPI.Data;
 namespace Systematix.WebAPI.Migrations
 {
     [DbContext(typeof(SystematixDbContext))]
-    partial class SystematixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220821113017_addbranchmaster")]
+    partial class addbranchmaster
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

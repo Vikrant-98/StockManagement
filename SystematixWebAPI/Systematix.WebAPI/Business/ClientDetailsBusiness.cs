@@ -123,6 +123,7 @@ namespace Systematix.WebAPI.Business
                 ClientCode = ClientCode,
                 IsDelete =false,
                 CreatedDate = DateTime.Now,
+                BranchCode = ClientHoldings.BranchCode,
                 ISIN = ClientHoldings.ISIN,
                 Quantity = ClientHoldings.Quantity,
                 Status = 1

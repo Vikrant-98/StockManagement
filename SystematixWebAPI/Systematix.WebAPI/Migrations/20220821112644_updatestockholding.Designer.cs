@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Systematix.WebAPI.Data;
 
@@ -11,9 +12,10 @@ using Systematix.WebAPI.Data;
 namespace Systematix.WebAPI.Migrations
 {
     [DbContext(typeof(SystematixDbContext))]
-    partial class SystematixDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220821112644_updatestockholding")]
+    partial class updatestockholding
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -168,42 +170,6 @@ namespace Systematix.WebAPI.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("tbl_Client");
-                });
-
-            modelBuilder.Entity("Systematix.WebAPI.Models.DTO.Holdings.Branch", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"), 1L, 1);
-
-                    b.Property<string>("BranchCode")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("BranchName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDelete")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("UpdatesBy")
-                        .HasColumnType("int");
-
-                    b.HasKey("ID");
-
-                    b.ToTable("tbl_BranchMaster");
                 });
 
             modelBuilder.Entity("Systematix.WebAPI.Models.DTO.Holdings.ClientHoldings", b =>
