@@ -41,8 +41,8 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            var userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            var ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
+            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
             var result = await _clientDetailsBusiness.RegisterClientDetails(clientDetailsRequest, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -52,8 +52,8 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            var userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            var ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
+            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
             var result = await _clientDetailsBusiness.RegisterClientAddress(ClientResponse, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -63,8 +63,8 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            var userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            var ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
+            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
             var result = await _clientDetailsBusiness.AddClientStocks(ClientResponse, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -74,8 +74,8 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            var userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            var ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
+            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
 
             ClientPANValidateRequest clientPANValidateRequest = new ClientPANValidateRequest() 
             {
