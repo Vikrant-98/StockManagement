@@ -20,8 +20,13 @@ namespace Systematix.WebAPI.Controllers.LedgerController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
             var result = await _ledgerBusiness.AddLedgerAsync(ledger, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -31,8 +36,13 @@ namespace Systematix.WebAPI.Controllers.LedgerController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
             var result = await _ledgerBusiness.GetLedgerAsync(ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item3 ,Fund = result.Item2});
         }

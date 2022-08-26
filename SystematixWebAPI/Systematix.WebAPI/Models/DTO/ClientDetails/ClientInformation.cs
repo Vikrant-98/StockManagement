@@ -88,6 +88,7 @@ namespace Systematix.WebAPI.Models.DTO.ClientDetails
         public string PANNumber { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }
+        public double PortFolioValue { get; set; }
         public List<ClientHoldingsInfo> Details { get; set; }
     }
 

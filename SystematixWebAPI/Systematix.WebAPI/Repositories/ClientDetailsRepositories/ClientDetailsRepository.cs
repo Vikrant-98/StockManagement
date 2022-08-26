@@ -191,12 +191,38 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
         }
 
         
-        public async Task<ClientHoldingResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientDetail)
+        public async Task<PanResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientDetail)
         {
             try
             {
                 var details = await systematixDbContext.tbl_ClientDetails.FirstOrDefaultAsync(x => x.ClientCode == ClientDetail.ClientCode
-                                                                && x.PANNumber == ClientDetail.PANNumber).ConfigureAwait(false);
+                                                                                                && x.PANNumber == ClientDetail.PANNumber).ConfigureAwait(false);
+                if (details == null)
+                {
+                    return new PanResponse()
+                    {
+                        Status = false,
+                        StatusMessage = "Details is not Valid"
+                    };
+                }
+
+                return new PanResponse()
+                {
+                    Status = true,
+                    StatusMessage = "Pan Details Verified"
+                };
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+        }
+
+        public async Task<ClientHoldingResponse> User_DetailsAsync(ClientPANValidateRequest ClientDetail)
+        {
+            try
+            {
+                var details = await systematixDbContext.tbl_ClientDetails.FirstOrDefaultAsync(x => x.ClientCode == ClientDetail.ClientCode).ConfigureAwait(false);
                 if (details == null)
                 {
                     return new ClientHoldingResponse()
@@ -214,7 +240,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
 
                 throw;
             }
-            
+
         }
 
 
@@ -247,8 +273,11 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
                 };
             }
 
+            double portFolioValue = 0;
+
             foreach (var item in ClientHoldingGroup)
             {
+                portFolioValue = portFolioValue + item.Sum(x => x.Value);
                 var TempQuantity = item.Sum(x => x.Quantity);
                 var TempRate = item.Average(x => x.Rate);
                 var TempClientCode = item.Select(x => x.ClientCode).FirstOrDefault();
@@ -268,7 +297,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
                 });
             }
 
-            var result = _objectMapper.mapClientDetails(ClientInformation, ClientDetails, ClientAddress, clientHoldingsInfo);
+            var result = _objectMapper.mapClientDetails(ClientInformation, ClientDetails, ClientAddress, clientHoldingsInfo, portFolioValue);
 
             return result;
         }

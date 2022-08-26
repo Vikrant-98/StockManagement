@@ -41,8 +41,13 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
             var result = await _clientDetailsBusiness.RegisterClientDetails(clientDetailsRequest, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -52,8 +57,13 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
             var result = await _clientDetailsBusiness.RegisterClientAddress(ClientResponse, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -63,8 +73,13 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
             var result = await _clientDetailsBusiness.AddClientStocks(ClientResponse, ClientCode).ConfigureAwait(false);
             return Ok(new { status = result.Item1, Message = result.Item2 });
         }
@@ -74,8 +89,13 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
         {
             var user = HttpContext.User;
 
-            string? userEmailID = user.Claims.FirstOrDefault(u => u.Type == "EmailID").Value;
-            string? ClientCode = user.Claims.FirstOrDefault(u => u.Type == "ClientCode").Value;
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
 
             ClientPANValidateRequest clientPANValidateRequest = new ClientPANValidateRequest() 
             {
@@ -86,9 +106,33 @@ namespace Systematix.WebAPI.Controllers.ClientDetailsController
 
             var result = await _clientDetailsBusiness.VerifyClientPAN_DetailsAsync(clientPANValidateRequest).ConfigureAwait(false);
 
+            return Ok(new { result.Status, result.StatusMessage });
+        }
+
+        [HttpGet("UserDetails")]
+        public async Task<IActionResult> UserDetails()
+        {
+            var user = HttpContext.User;
+
+            string? userEmailID = user?.Claims?.FirstOrDefault(u => u.Type == "EmailID")?.Value;
+            string? ClientCode = user?.Claims?.FirstOrDefault(u => u.Type == "ClientCode")?.Value;
+
+            if (string.IsNullOrEmpty(userEmailID) || string.IsNullOrEmpty(ClientCode))
+            {
+                return Unauthorized(new { Status = false, StatusMessage = "Token Not Valid or Unauthorized" });
+            }
+
+            ClientPANValidateRequest clientPANValidateRequest = new ClientPANValidateRequest()
+            {
+                ClientCode = ClientCode,
+                EmailId = userEmailID
+            };
+
+            var result = await _clientDetailsBusiness.User_DetailsAsync(clientPANValidateRequest).ConfigureAwait(false);
+
             if (result.Status)
             {
-                return Ok(new { result.Status, result.StatusMessage, result.ClientDetails});
+                return Ok(new { result.Status, result.StatusMessage, result.ClientDetails });
             }
 
             return Ok(new { result.Status, result.StatusMessage });

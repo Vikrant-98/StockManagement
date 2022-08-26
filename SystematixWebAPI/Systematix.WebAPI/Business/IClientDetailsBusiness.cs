@@ -10,6 +10,7 @@ namespace Systematix.WebAPI.Business
         Task<(bool,string)> RegisterClientDetails(ClientDetailsRequest ClientDetailsRequest,string clientCode);
         Task<(bool, string)> RegisterClientAddress(ClientResponse ClientAddress, string ClientCode);
         Task<(bool, string)> AddClientStocks(ClientHoldingsRequest ClientHoldings, string ClientCode);
-        Task<ClientHoldingResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientPANValidateRequest);
+        Task<PanResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientPANValidateRequest);
+        Task<ClientHoldingResponse> User_DetailsAsync(ClientPANValidateRequest employeedetail);
     }
 }

@@ -11,13 +11,13 @@ namespace Systematix.WebAPI.Services.Mapping
             _logger = logger;
         }
 
-        public ClientHoldingResponse mapClientDetails(ClientInformation clientInformation, ClientDetails clientDetails, ClientAddress clientAddress, List<ClientHoldingsInfo> clientHoldingsInfo) 
+        public ClientHoldingResponse mapClientDetails(ClientInformation clientInformation, ClientDetails clientDetails, ClientAddress clientAddress, List<ClientHoldingsInfo> clientHoldingsInfo,double portFolio) 
         {
             try
             {
-                return new ClientHoldingResponse() 
+                return new ClientHoldingResponse()
                 {
-                    ClientDetails = new ClientDetailsResponse() 
+                    ClientDetails = new ClientDetailsResponse()
                     {
                         EmailID = clientInformation.EmailID,
                         ClientCode = clientInformation.ClientCode,
@@ -28,7 +28,8 @@ namespace Systematix.WebAPI.Services.Mapping
                         PANNumber = clientDetails.PANNumber,
                         TradingCode = clientDetails.TradingCode,
                         FatherName = clientDetails.FatherName,
-                        Details = clientHoldingsInfo
+                        Details = clientHoldingsInfo, 
+                        PortFolioValue = Math.Round(portFolio, 2) 
                     },
                     Status = true,
                     StatusMessage = "Success"

@@ -10,6 +10,7 @@ namespace Systematix.WebAPI.Repositories.ClientDetailsRepositories
         Task<(bool, string)> RegisterClientDetails(ClientDetails ClientDetailsRequest, string clientCode);
         Task<(bool, string)> RegisterClientAddress(ClientAddress ClientAddress);
         Task<(bool, string)> AddClientStocks(ClientHoldings ClientHoldings);
-        Task<ClientHoldingResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest employeedetail);
+        Task<PanResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest employeedetail);
+        Task<ClientHoldingResponse> User_DetailsAsync(ClientPANValidateRequest employeedetail);
     }
 }

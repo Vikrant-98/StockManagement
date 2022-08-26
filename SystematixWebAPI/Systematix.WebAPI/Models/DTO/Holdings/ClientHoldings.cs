@@ -33,9 +33,15 @@ namespace Systematix.WebAPI.Models.DTO.Holdings
         public string BranchCode { get; set; }
     }
 
-        public class ClientHoldingResponse 
+    public class ClientHoldingResponse 
     {
         public ClientDetailsResponse ClientDetails { get; set; }
+        public bool Status { get; set; }
+        public string StatusMessage { get; set; }
+    }
+
+    public class PanResponse
+    {
         public bool Status { get; set; }
         public string StatusMessage { get; set; }
     }

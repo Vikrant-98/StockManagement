@@ -134,14 +134,14 @@ namespace Systematix.WebAPI.Business
             return result;
         }
 
-        public async Task<ClientHoldingResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientPANValidateRequest)
+        public async Task<PanResponse> VerifyClientPAN_DetailsAsync(ClientPANValidateRequest ClientPANValidateRequest)
         {
             
             if (string.IsNullOrEmpty(ClientPANValidateRequest.PANNumber) || 
                 string.IsNullOrEmpty(ClientPANValidateRequest.EmailId) ||
                 string.IsNullOrEmpty(ClientPANValidateRequest.ClientCode))
             {
-                return new ClientHoldingResponse()
+                return new PanResponse()
                 {
                     Status = false,
                     StatusMessage = "Details is not Valid"
@@ -149,6 +149,20 @@ namespace Systematix.WebAPI.Business
             }
 
             var Response = await _clientDetailsRepository.VerifyClientPAN_DetailsAsync(ClientPANValidateRequest).ConfigureAwait(false);
+            return Response;
+        }
+        public async Task<ClientHoldingResponse> User_DetailsAsync(ClientPANValidateRequest employeedetail)
+        {
+            
+            if (string.IsNullOrEmpty(employeedetail.EmailId) ||
+                string.IsNullOrEmpty(employeedetail.ClientCode))
+                return new ClientHoldingResponse()
+                {
+                    Status = false,
+                    StatusMessage = "Details is not Valid"
+                };
+
+            var Response = await _clientDetailsRepository.User_DetailsAsync(employeedetail).ConfigureAwait(false);
             return Response;
         }
 
